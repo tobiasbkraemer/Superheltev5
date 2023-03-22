@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<link th:href="@{/superherotheme.css}" rel="stylesheet">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Superheroes</title>
+</head>
+<body>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Hero Name</th>
+        <th scope="col">Real Name</th>
+        <th scope="col">Creation Year</th>
+        <th scope="col">     </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="superhero:${Heroes}">
+        <td th:text="${superhero.heroName}"/>
+        <td th:text="${superhero.realName}"/>
+        <td th:text="${superhero.creationYear}"/>
+        <td>
+            <a th:href="@{/kea/superheroes/superpower/{heroname}(heroname=${superhero.heroName})}">
+                <button>Power</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
