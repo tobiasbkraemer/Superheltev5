@@ -2,6 +2,7 @@ package com.example.superheltev5.Service;
 import com.example.superheltev5.DTO.CityDTO;
 import com.example.superheltev5.DTO.CountPowerDTO;
 import com.example.superheltev5.DTO.HeroPowerDTO;
+import com.example.superheltev5.DTO.SuperheroDTO;
 import com.example.superheltev5.Modul.Superhero;
 import com.example.superheltev5.Repository.MyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,9 @@ public class MyService {
 
     public CountPowerDTO countPowerDTO(String name) {
         return myRepository.heroPowerCount(name);
+    }
+
+    public void addSuperhero(SuperheroDTO superheroDTO) {
+        myRepository.addSuperHero(superheroDTO);
     }
 }

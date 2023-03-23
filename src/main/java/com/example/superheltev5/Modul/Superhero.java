@@ -40,4 +40,28 @@ public class Superhero {
     public int getCityID() {
         return cityID;
     }
+
+    public void setHeroID(int heroID) {
+        this.heroID = heroID;
+    }
+
+    public void setHeroName(String heroName) {
+        this.heroName = heroName;
+    }
+
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public void setCreationYear(int creationYear) {
+        this.creationYear = creationYear;
+    }
+
+    public void setPowerID(int powerID) {
+        this.powerID = powerID;
+    }
+
+    public void setCityID(int cityID) {
+        this.cityID = cityID;
+    }
 }

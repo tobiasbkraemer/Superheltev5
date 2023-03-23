@@ -12,10 +12,9 @@
         <th scope="col">Hero Name</th>
         <th scope="col">Real Name</th>
         <th scope="col">Creation Year</th>
-        <th scope="col">     </th>
+        <th scope="col"></th>
     </tr>
     </thead>
-    <tbody>
     <tr th:each="superhero:${Heroes}">
         <td th:text="${superhero.heroName}"/>
         <td th:text="${superhero.realName}"/>
@@ -25,8 +24,20 @@
                 <button>Power</button>
             </a>
         </td>
+        <td>
+            <a th:href="@{/kea/superheroes/update/{heroname}(heroname=${superhero.heroName})}">
+                <button>Update</button>
+            </a>
+        </td>
+        <td>
+            <a th:href="@{/kea/superheroes/superpower/{heroname}(heroname=${superhero.heroName})}">
+                <button>Delete</button>
+            </a>
+        </td>
     </tr>
-    </tbody>
 </table>
+<a th:href="@{/kea/superheroes/add}">
+    <button>Create new superhero</button>
+</a>
 </body>
 </html>

@@ -1,18 +1,24 @@
 package com.example.superheltev5.DTO;
 
+import java.util.List;
+
 public class SuperheroDTO {
+
+    List<String> powerList;
     private String heroName;
     private String realName;
     private int creationYear;
-    private int superpowerID;
-    private String cityID;
+    private String city;
 
-    public SuperheroDTO(String heroName, String realName, int creationYear, int superpowerID, String cityID) {
+    public SuperheroDTO(String heroName, String realName, int creationYear, String city, List<String> powerList) {
         this.heroName = heroName;
         this.realName = realName;
         this.creationYear = creationYear;
-        this.superpowerID = superpowerID;
-        this.cityID = cityID;
+        this.city = city;
+        this.powerList=powerList;
+    }
+
+    public SuperheroDTO () {
     }
 
     public String getHeroName() {
@@ -27,11 +33,31 @@ public class SuperheroDTO {
         return creationYear;
     }
 
-    public int getSuperpowerID() {
-        return superpowerID;
+    public void setHeroName(String heroName) {
+        this.heroName = heroName;
     }
 
-    public String getCityID() {
-        return cityID;
+    public void setRealName(String realName) {
+        this.realName = realName;
+    }
+
+    public void setCreationYear(int creationYear) {
+        this.creationYear = creationYear;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public List<String> getPowerList() {
+        return powerList;
+    }
+
+    public void setPowerList(List<String> powerList) {
+        this.powerList = powerList;
     }
 }
